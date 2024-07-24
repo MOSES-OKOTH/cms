@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --primary: #023047;
+    --secondary: #219ebc;
+    --third: #fefae0;
+}
+
+
+*{
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+/*STYLING HEADER*/
+.header{
+    background: white;
+    z-index: 5;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    max-width: 100vw;
+    padding: 12px 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1vh;
+    box-shadow: 0px 0px 10px black;
+}
+
+.header img{
+    height: 64px;
+}
+
+.header nav a{
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--primary);
+    margin-right: 0.5vw;
+    padding: 1vh 1vw;
+    border-radius: 4px;
+}
+
+
+.header a:hover{
+    background: rgba(0, 0, 0, 0.05);
+    transition: 150ms;
+}
+
+.header a:last-child{
+    color: white;
+    background: var(--primary);
+    margin-left: 1vw;
+}
+
+.logo a{
+    padding: 0;
+    text-decoration: none;
+    background: none;
+}
+
+/*HOME PAGE*/
+.home{
+    height: calc(100vh - 138px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    padding: 10vh 8vw;
+}
+
+.home div:first-child{
+    width: 30vw;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.home img{
+    height: 60vh;
+    border-radius: 20px;
+}
+
+.home div:last-child{
+    display: flex;
+    flex-direction: column;
+    padding: 0vh 2vw;
+}
+
+.home div:last-child h2{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.home div:last-child p{
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 20px;
+    margin-top: 2.5vh;
+}
+
+.home div:last-child div:last-child{
+    display: flex;
+    flex-direction: row;
+    gap: 4vh;
+    margin-top: 4vh;
+    padding: 0;
+}
+
+.home a{
+    text-decoration: none;
+    padding: 1vh 1vw;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.home a:hover{
+    background: rgba(0, 0, 0, 0.05);
+    transition: 150ms;
+}
+
+/*COMPLAINT*/
+.complaint{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+}
+
+.complaint div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.complaint div:first-child h1{
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.complaint div:first-child p{
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.complaint #success{
+    display: none;
+    border: 2px solid green;
+    background: rgba(0, 250, 0, 0.05);
+    width: 100%;
+    padding: 1vh 1vw;
+    margin-top: 2vh;
+    color: black;
+}
+
+.complaint form{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.complaint form input{
+    height: 2.5vw;
+    padding: 1vh 2vw;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+    width: 32vw;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+}
+
+.complaint form input::placeholder{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.complaint form textarea{
+    height: 8vw;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+    padding: 2vh 2vw;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+}
+
+.complaint form textarea::placeholder{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.complaint form button{
+    padding: 10px 0;
+    border: 2px solid var(--primary);
+    font-size: 16px;
+    color: var(--primary);
+    background: none;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4vh;
+}
+
+.complaint form button:hover{
+    background: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.complaint form button img{
+    height: 18px;
+    margin-right: 8px;
+}
+
+
+/*FOLLOW UP*/
+.follow{
+    padding: 10vh 5vw;
+    min-height: calc(100vh - 100px);
+}
+
+.follow-header{
+    padding-bottom: 1vh;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.follow-header p{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.follow-header input{
+    height: 2.2rem;
+    width: 32vw;
+    padding: 1vh 2vw;
+    border: 2px solid rgba(0, 0, 0, 0.45);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    outline: none;
+}
+
+.follow-header input::placeholder{
+    color: rgba(0, 0, 0, 0.35);
+    font-size: 14px;
+}
+
+.follow-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.follow-main img{
+    height: 4vw;
+}
+
+.follow-main p{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.follow-main table{
+    margin-top: 10vh;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.follow-main table tr{
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.follow-main table td{
+    padding: 1vh 1vw;
+    border: 1px solid white;    
+}
+
+.follow-main table tr td:last-child{
+    text-align: right;
+}
+
+.follow-main table tr:first-child{
+    background: var(--primary);
+    color: white;
+}
+
+.follow-main table tr:first-child td{
+    border: none;
+}
+
+.follow-main table tr:last-child td{
+    border: none;
+}
+
+.follow-main table tr:last-child{
+    background: var(--primary);
+    color: white;
+}
+
