@@ -39,7 +39,7 @@
         .feedback{
             padding: 8vh 5vw;
             width: 100%;
-            height: 100vh;
+            height: calc(100vh - 100px);
             overflow-y: scroll;
             display: flex;
             flex-direction: column;
