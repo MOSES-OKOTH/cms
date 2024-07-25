@@ -17,7 +17,7 @@
     $dailyUnresolvedRes = mysqli_query($connection, $dailyUnresolvedSql);
     $dailyUnresolvedData = mysqli_num_rows($dailyUnresolvedRes);
 
-    $dailyResolvedSql = "SELECT * FROM complaints WHERE added_on LIKE '".date("Y-m-d")."%' AND status = '1'";
+    $dailyResolvedSql = "SELECT * FROM complaints WHERE added_on LIKE '".date("Y-m-d")."%' AND status != '0'";
     $dailyResolvedRes = mysqli_query($connection, $dailyResolvedSql);
     $dailyResolvedData = mysqli_num_rows($dailyResolvedRes);
 
@@ -26,11 +26,11 @@
     $monthlyRegistrationRes = mysqli_query($connection, $monthlyRegistrationSql);
     $monthlyRegistrationData = mysqli_num_rows($monthlyRegistrationRes);
 
-    $monthlyUnresolvedSql = "SELECT * FROM complaints WHERE added_on LIKE '".date("Y-m")."%' AND status = '0'";
+    $monthlyUnresolvedSql = "SELECT * FROM complaints WHERE added_on LIKE '".date("Y-m-")."%' AND status = '0'";
     $monthlyUnresolvedRes = mysqli_query($connection, $monthlyUnresolvedSql);
     $monthlyUnresolvedData = mysqli_num_rows($monthlyUnresolvedRes);
 
-    $monthlyResolvedSql = "SELECT * FROM complaints WHERE added_on LIKE '".date("Y-m")."%' AND status = '1'";
+    $monthlyResolvedSql = "SELECT * FROM complaints WHERE added_on LIKE '".date("Y-m-")."%' AND status != '0'";
     $monthlyResolvedRes = mysqli_query($connection, $monthlyResolvedSql);
     $monthlyResolvedData = mysqli_num_rows($dailyResolvedRes);
 
@@ -43,7 +43,7 @@
     $annualUnresolvedRes = mysqli_query($connection, $annualUnresolvedSql);
     $annualUnresolvedData = mysqli_num_rows($annualUnresolvedRes);
 
-    $annualResolvedSql = "SELECT * FROM complaints WHERE added_on LIKE '".date("Y")."%' AND status = '1'";
+    $annualResolvedSql = "SELECT * FROM complaints WHERE status = '1' AND added_on LIKE '".date("Y")."%'";
     $annualResolvedRes = mysqli_query($connection, $annualResolvedSql);
     $annualResolvedData = mysqli_num_rows($dailyResolvedRes);
 ?>
